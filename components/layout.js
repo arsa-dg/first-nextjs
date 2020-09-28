@@ -2,8 +2,9 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import NavBar from "./Navbar"
 
-const name = 'Your Name'
+const name = 'Arsa'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
@@ -23,8 +24,11 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
       </Head>
       <header className={styles.header}>
+        <NavBar />
         {home ? (
           <>
             <img
@@ -61,6 +65,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </div>
   )
 }
